@@ -1,5 +1,5 @@
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://ruby.taobao.org/
   specs:
     actionmailer (4.1.7)
       actionpack (= 4.1.7)
@@ -34,6 +34,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt (3.1.9)
     bcrypt (3.1.9-x86-mingw32)
     best_in_place (3.0.0)
       actionpack (>= 3.2)
@@ -77,6 +78,7 @@ GEM
       warden (~> 1.2.3)
     equalizer (0.0.9)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.2.2)
     grape (0.9.0)
@@ -119,8 +121,11 @@ GEM
     minitest (5.4.3)
     multi_json (1.10.1)
     multi_xml (0.5.5)
-    mysql2 (0.3.11-x86-mingw32)
+    mysql2 (0.3.20)
+    mysql2 (0.3.20-x86-mingw32)
     netrc (0.7.9)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     nokogiri (1.6.0-x86-mingw32)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
@@ -129,6 +134,10 @@ GEM
     polyamorous (1.1.0)
       activerecord (>= 3.0)
     pr_geohash (1.0.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     pry (0.10.1-x86-mingw32)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -243,6 +252,7 @@ GEM
       jquery-rails
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
@@ -255,7 +265,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dalli (= 2.7.2)
   default_value_for (= 3.0.0.1)
-  devise (= 3.4.1)
+  devise
   grape (= 0.9.0)
   ipparse
   jbuilder (~> 2.0)
@@ -264,7 +274,7 @@ DEPENDENCIES
   lol_dba (= 1.5.0)
   migration_comments (= 0.3.2)
   mini_magick (= 4.0.0)
-  mysql2 (= 0.3.11)
+  mysql2 (~> 0.3.18)
   nokogiri (= 1.6.0)
   paranoia (= 2.0.2)
   pry-rails (= 0.3.2)
@@ -287,3 +297,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   whenever (= 0.9.4)
   ztree (= 0.0.7)
+
+BUNDLED WITH
+   1.11.2

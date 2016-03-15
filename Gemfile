@@ -1,11 +1,11 @@
 # encoding: utf-8
-source 'http://ruby.taobao.org'
+source 'https://ruby.taobao.org'
 
 gem 'rails', '4.1.7'
 # gems\activerecord-4.1.7\lib\active_record\connection_adapters\mysql2_adapter.rb -> '~> 0.3.11'
-gem 'mysql2', '0.3.11'
+gem  'mysql2', '~> 0.3.18'
 
-gem 'devise', '3.4.1'
+gem 'devise'
 
 gem 'sass-rails', '~> 4.0.3'
 # for assets
