@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   namespace :backend do
     get '/' => 'home#index'
+    resources :home_page
+    resources :pictures
   end
 
   # Example of regular route:
