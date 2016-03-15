@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>阳光公采网站管理系统</title>
+    <%= stylesheet_link_tag 'spp', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'spp', 'data-turbolinks-track' => true %>
+  </head>
+  <body>
+
+    <!--左侧代码开始-->
+    <div class="project-left">
+      <div class="logo">
+        <h1><span>网站管理系统</span></h1>
+      </div>
+      <div class="left_nav">
+        <ul>
+          <!-- li class="nav_other"><li -->
+       
+            <li> <a href="">管理员设置</a></li>
+            <li> <a href="">首页</a></li>
+            <li> <a href="">资讯动态 </a></li>
+            <li> <a href="">产品与方案 </a></li>
+            <li> <a href="">文章及栏目管理 </a></li>
+            <li> <a href="">关于我们 </a></li>
+
+        </ul>
+      </div>
+    </div>
+    <!--左侧代码结束-->
+
+    <!--右侧代码开始-->
+    <div class="project-right">
+
+      <!--个人信息代码开始-->
+      <div class="personal">
+
+        <div class="personal_left">
+
+          <div class="personal_name">
+            <h2>Hello，</h2>
+            <p>欢迎光临阳光公采网站管理系统！
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!--个人信息代码结束-->
+
+      <div class='container'>
+        <div class="content">
+          <%= yield %>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{-webkit-text-size-adjust:none;/*解决谷歌小于12px字体*/}
+/*layout*/
+body{ font-size:12px; font-family: "Microsoft YaHei"; color:#333333; background:#f1f1f1; min-width:1240px;}
+.tracks {
+	padding:20px 20px 20px 0;
+}
+.tracks ul {
+	text-decoration:none;
+}
+.tracks ul li {
+	width:100%;
+	height:90px;
+	float:left;
+	cursor:pointer;
+}
+.tracks ul li {
+	font-size:16px;
+	color:#fff;
+	padding:18px 0 0 20px;
+	line-height:24px;
+}
+.tracks ul li {
+	font-size:14px;
+	color:#fff;
+	padding-left:20px;
+}
+.tracks .hint{
+
+	font-size: 14px;
+	color: #F00;
+}
