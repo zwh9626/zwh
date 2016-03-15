@@ -1,13 +1,19 @@
-<h2>登录</h2>
+<div class="login_head">
+  <div class="headmain"> </div>
+
+  <div class="login">
+    <div class="login_left"><img src="/assets/img_03-1be2fd538396d6db7233109b1993de9c.jpg" width="500"></div>
+<div class="login_right">
+<h2>管理员登录</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
  <div class="item">
-    <div class="labe w100"><span>*</span> 账 号</div>
+    <div class="labe w100"><span>*</span> 账 号：</div>
     <%= f.email_field :email, autofocus: true, class: 'basic-input' %>
   </div>
 
   <div class="item">
-    <div class="labe w100"><span>*</span> 密 码</div>
+    <div class="labe w100"><span>*</span> 密 码：</div>
     <%= f.password_field :password, autocomplete: "off", class: 'basic-input' %>
   </div>
 
@@ -27,6 +33,7 @@
           <%= link_to "忘记密码？", new_password_path(resource_name) %>
         <% end -%>
       </span>
+      </p>
     </div>
   <% end -%>
 
@@ -36,3 +43,6 @@
 
   <div class="gayline"></div>
 <% end %>
+</div>
+</div>
+</div>
