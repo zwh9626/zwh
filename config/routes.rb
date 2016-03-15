@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
+  #1，我们指定自己的 Controller 来处理；
+  #2，继承 devise；
+  #3  , 只重写我们想定制的部分action
+  devise_for :users, controllers: {
+    sessions: "user/sessions",
+    registrations: "user/registrations",
+    passwords: "user/passwords",
+  }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  namespace :backend do
+    get 'home' =>'/backend/home#index'  
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,38 @@
+<h2>登录</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ <div class="item">
+    <div class="labe w100"><span>*</span> 账 号</div>
+    <%= f.email_field :email, autofocus: true, class: 'basic-input' %>
+  </div>
+
+  <div class="item">
+    <div class="labe w100"><span>*</span> 密 码</div>
+    <%= f.password_field :password, autocomplete: "off", class: 'basic-input' %>
+  </div>
+
+  <% if flash[:alert] %>
+    <div class="item">
+      <a href="javascript:void(0);"><p class="wrong"><%= flash[:alert] %></p></a>
+    </div>
+  <% end %>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="item">
+      <p class="agreementx">
+      <%= f.check_box :remember_me, id: "agreement", class: "agreement" %>
+      自动登录
+      <span>
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "忘记密码？", new_password_path(resource_name) %>
+        <% end -%>
+      </span>
+    </div>
+  <% end -%>
+
+  <div class="item">
+    <%= f.submit "马上登录", class: 'btn_submit' %>
+  </div>
+
+  <div class="gayline"></div>
+<% end %>

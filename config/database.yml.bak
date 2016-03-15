@@ -1,28 +1,23 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
+# encoding: utf-8
 default: &default
   adapter: mysql2
-  pool: 5
-  host: localhost
+  encoding: utf8
+  reconnect: false
+  database: dota
+  host: 192.168.1.200
+  pool: 15
   username: root
-  password: 123456 
-  timeout: 5000
+  password: 
 
 development:
   <<: *default
-  database: spp
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: spp
 
 production:
   <<: *default
-  database: spp
+
