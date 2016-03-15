@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root :to => "backend/home#index"
+
   namespace :backend do
-    get 'home' =>'/backend/home#index'  
+    get '/' => 'home#index'
   end
 
   # Example of regular route:
