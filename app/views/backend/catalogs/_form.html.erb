@@ -1,0 +1,16 @@
+<%= form_for [:backend,@catalog], html: {:class => "valid_engine establish"} do |f| %>
+  <div class="public_form">
+    <label class="label"><span></span>栏目名称：</label>
+    <%= f.text_field :name%>
+  </div>
+
+  <div class="public_form">
+    <label class="label"><span></span>栏目描述：</label>
+    <%= f.text_area :desc%>
+  </div>
+
+  <div>
+   <%= render '/backend/shared/form_buttons',:f => f %>
+  </div>
+
+<% end -%>

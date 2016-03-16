@@ -1,0 +1,7 @@
+<% html ||="" %>
+<div class="form-actions tc">
+  <%= hidden_field_tag 'back', params[:back] %>
+  <%= f.button "提交", :class => "submit submit_blue mt10 w50 ml100"%>
+  <%= link_to "返回", params[:back], class: 'submit submit_gray mt10 w50' if params[:back].present? %>
+  <%= html.html_safe%>
+</div>

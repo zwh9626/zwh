@@ -9,7 +9,7 @@ address,cite,dfn,em,var,i{font-style:normal;}
 ul,ol{list-style-type:none;}
 sup{ vertical-align: text-top; }
 sub{ vertical-align: text-bottom; }
-.jianju_x{clear:both; height:10px;}
+.jianju_x{height:10px;}
 
 
 /*边距*/

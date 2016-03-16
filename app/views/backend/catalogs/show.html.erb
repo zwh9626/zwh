@@ -1,0 +1,18 @@
+<% list_link = backend_catalogs_path(:back => request.fullpath) %>
+
+<h1>
+  <%= "#{@catalog.try(:name)}"%>栏目详情：
+
+  <%= link_to '返回', params[:back] || list_link %>
+</h1>
+
+  <%= link_to '修改', edit_backend_catalog_path(@catalog, :back => request.fullpath)%>
+
+
+<div class="well_head">
+  <div class="jianju_x"></div>
+
+  <div class='mb20 document_content'>
+    <%= markdown(@catalog.desc) rescue nil%>
+  </div>
+</div>
