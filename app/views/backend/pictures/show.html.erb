@@ -1,0 +1,22 @@
+<h1>详情</h1>
+<div class="well_head">
+
+  <div class="establish">
+   <div class="public_form">
+      <label class="label">图片名称:</label>
+      <span class="validate-name"><%= @picture.name %></span>
+    </div>
+
+    <div class="public_form">
+      <label class="label">图片内容:</label>
+      <span class="validate-name">
+        <% @picture.avatars.each do |ta|%>
+             <a class="pic" href="<%= ta.photo.url %>" ><%= image_tag(ta.photo.url, size: "100x80", title: '点击放大') %></a>
+          <% end %>
+      </span>
+    </div> 
+
+  <%= link_to '修改', edit_backend_picture_path(@picture, :back => request.fullpath)%>
+  <%= link_to '返回', params[:back]  %>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="plate">
+    <ul>
+      <%= plate_link new_backend_picture_path(:back => request.fullpath), is_first: true, color: 'green', title: '新增图片', desc: '添加图片' %>
+    </ul>
+  </div>
+  <div class="line"></div> 
+<div class="well_head">
+  <table class="common">
+    <tbody>
+      <tr>
+        <td>图片名称</td>
+        <td>图片内容</td>
+        <td>操作</td>
+      </tr>
+
+      <% @pictures.each do |picture| %>
+        <tr>
+         <td><%=picture.name%></td>
+         <td>
+           <% picture.avatars.each do |ta|%>
+             <a class="pic" href="<%= ta.photo.url %>" ><%= image_tag(ta.photo.url, size: "100x80", title: '点击放大') %></a>
+          <% end %>
+         </td>
+         <td>
+         <%= link_to '查看', backend_picture_path(picture, :back => request.fullpath)%>
+         <%= link_to '修改', edit_backend_picture_path(picture, :back => request.fullpath)%>
+         <%= link_to '删除', backend_picture_path(picture, :back => request.fullpath), data: {method: :delete,confirm: "你确定删除?"} %>
+         </td>
+       </tr>
+
+      <% end %>
+      <td class="textc operation">  
+      </td>
+    </tbody>
+  </table>
+</div>
