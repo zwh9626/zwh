@@ -5,6 +5,9 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+require "ueditor_rails"
+
+UeditorRails.enable_cross_domain = true
 
 module Spp
   class Application < Rails::Application

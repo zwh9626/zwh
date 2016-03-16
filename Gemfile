@@ -68,6 +68,8 @@ gem "default_value_for", "3.0.0.1"
 
 # 百度富文本编辑器 not for rails4
 # gem 'ueditor_rails'
+gem 'ueditor_rails', :git => "git://github.com/chinacheng/ueditor_rails.git"
+
 
 gem 'ztree', '0.0.7'
 # 加速静态文件编译

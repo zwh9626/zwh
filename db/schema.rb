@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160315062828) do
 
   create_table "avatars", force: true do |t|
     t.string   "photo"
     t.integer  "avatarable_id"
     t.string   "avatarable_type"
+
+ActiveRecord::Schema.define(version: 20160316033949) do
+
+  create_table "abouts", force: true do |t|
+    t.string   "synopsis",   comment: "公司简介"
+    t.string   "recruit",    comment: "人才招聘"
+    t.string   "contact",    comment: "联系我们"
+
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,11 +37,13 @@ ActiveRecord::Schema.define(version: 20160315062828) do
     t.datetime "updated_at"
   end
 
+
   create_table "pictures", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

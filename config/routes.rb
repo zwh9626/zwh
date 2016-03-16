@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # mount UeditorRails::Engine => '/ueditor'
   #1，我们指定自己的 Controller 来处理；
   #2，继承 devise；
   #3  , 只重写我们想定制的部分action
@@ -15,9 +16,18 @@ Rails.application.routes.draw do
 
   namespace :backend do
     get '/' => 'home#index'
+
+         #ueditor编辑器
+  mount UeditorRails::Engine => '/ueditor'
+
     resources :catalogs
     resources :home_page
     resources :pictures
+    resources :abouts do
+      collection do
+        get :edit_detail
+      end
+    end
   end
 
   # Example of regular route:
